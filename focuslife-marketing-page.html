@@ -488,6 +488,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
+            .hero-images {
+                grid-template-columns: 1fr !important;
+                gap: var(--space-3) !important;
+            }
 
             .btn-lg {
                 width: 100%;
@@ -501,6 +506,11 @@
             .features-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .marketing-images {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
 
             .comparison-grid {
                 grid-template-columns: 1fr;
@@ -509,6 +519,44 @@
             .cta h2 {
                 font-size: 2rem;
             }
+        }
+
+        /* Hero Images Hover Effects */
+        .hero-image:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .screenshot-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary);
+        }
+        
+        /* Marketing Images Section */
+        .marketing-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+            margin: var(--space-12) 0;
+        }
+        
+        .marketing-image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+        
+        .marketing-image:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .marketing-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Animations */
@@ -539,7 +587,7 @@
     <header class="header">
         <nav class="nav container">
             <a href="https://my.focuslife.ai" class="logo">
-                <img src="./focuslife-logo-embedded-cropped.svg" alt="FocusLife.ai Logo" class="logo-icon">
+                <img src="./optimized/logo-small.jpg" alt="FocusLife.ai Logo" class="logo-icon">
                 <span class="logo-text">FocusLife.ai</span>
             </a>
             <ul class="nav-links">
@@ -561,12 +609,55 @@
                     The world's first AI-driven multi-condition supplement tracking platform. 
                     Get scientific insights into what actually works for your unique health goals.
                 </p>
+                
+                <!-- Hero Images Section -->
+                <div class="hero-images" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-4); margin: var(--space-8) 0; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <div class="hero-image" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: transform 0.3s ease;">
+                        <img src="./optimized/dashboard-screenshot.jpg" alt="FocusLife.ai Dashboard - Daily tracking with supplement management" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div class="hero-image" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: transform 0.3s ease;">
+                        <img src="./optimized/focus-session-screenshot.jpg" alt="Focus Session Timer - ADHD productivity tracking" style="width: 100%; height: auto; display: block;">
+                    </div>
+                    <div class="hero-image" style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: transform 0.3s ease;">
+                        <img src="./optimized/add-supplement-screenshot.jpg" alt="Add Supplement Form - Professional supplement management" style="width: 100%; height: auto; display: block;">
+                    </div>
+                </div>
                 <div class="hero-beta-notice" style="background: rgba(16, 185, 129, 0.1); padding: var(--space-4); border-radius: var(--radius-lg); margin: var(--space-6) 0; border: 2px solid var(--success);">
                     <p style="margin: 0; color: var(--success); font-weight: 600;">🎉 Currently in Beta - Everything is FREE! 😊</p>
                 </div>
                 <div class="hero-cta">
                     <a href="https://my.focuslife.ai" class="btn btn-primary btn-lg">Start Your Free Journey</a>
                     <a href="#features" class="btn btn-secondary btn-lg">Discover Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots Section -->
+    <section class="screenshots" style="padding: var(--space-16) 0; background: var(--white);">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2>See FocusLife.ai in Action</h2>
+                <p>Real screenshots from our beta platform showing the powerful features that make wellness tracking effortless.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--space-8); margin-top: var(--space-12);">
+                <div class="screenshot-card scroll-animate" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <img src="./optimized/dashboard-screenshot.jpg" alt="Daily Dashboard" style="width: 100%; border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-2);">📊 Daily Dashboard</h3>
+                    <p style="color: var(--text-secondary);">Track your supplement intake with easy-to-use cards showing dosage, timing, and quick logging buttons. See your progress at a glance.</p>
+                </div>
+                
+                <div class="screenshot-card scroll-animate" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <img src="./optimized/focus-session-screenshot.jpg" alt="Focus Session Timer" style="width: 100%; border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-2);">⏱️ Focus Sessions</h3>
+                    <p style="color: var(--text-secondary);">Time your productivity sessions and track ADHD metrics like focus level and task initiation with interactive sliders.</p>
+                </div>
+                
+                <div class="screenshot-card scroll-animate" style="background: var(--white); border-radius: var(--radius-xl); padding: var(--space-6); box-shadow: var(--shadow-lg); border: 1px solid var(--gray-200);">
+                    <img src="./optimized/add-supplement-screenshot.jpg" alt="Supplement Management" style="width: 100%; border-radius: var(--radius-lg); margin-bottom: var(--space-4);">
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: var(--space-2);">💊 Supplement Management</h3>
+                    <p style="color: var(--text-secondary);">Add supplements with detailed information including inventory tracking, brand names, and dosage forms for complete management.</p>
                 </div>
             </div>
         </div>
@@ -692,6 +783,31 @@
         </div>
     </section>
 
+    <!-- Marketing Images Section -->
+    <section class="marketing" style="padding: var(--space-16) 0; background: var(--bg-subtle);">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2>Wellness Made Visual</h2>
+                <p>Experience the future of health tracking with beautiful, intuitive design that makes complex data simple to understand.</p>
+            </div>
+            
+            <div class="marketing-images">
+                <div class="marketing-image scroll-animate">
+                    <img src="./optimized/supplement-management-hero.jpg" alt="Professional supplement management interface">
+                </div>
+                <div class="marketing-image scroll-animate">
+                    <img src="./optimized/active-lifestyle-hero.jpg" alt="Active lifestyle and wellness tracking">
+                </div>
+                <div class="marketing-image scroll-animate">
+                    <img src="./optimized/healthcare-consultation-hero.jpg" alt="Healthcare professional consultation features">
+                </div>
+                <div class="marketing-image scroll-animate">
+                    <img src="./optimized/social-interaction-hero.jpg" alt="Community and social wellness features">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Competitive Advantage -->
     <section class="competitive">
         <div class="container">
@@ -762,22 +878,22 @@
                 </div>
 
                 <div class="footer-section">
-                    <h3>Resources</h3>
+                    <h3>Legal</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Help Center</a></li>
                         <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="tel:615-829-6667">Media Inquiries: (615) 829-6667</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Healthcare Providers</a></li>
-                        <li><a href="#">Enterprise</a></li>
-                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="mailto:support@focuslife.ai?subject=FocusLife.ai Support Request">Support (Paid Users)</a></li>
+                        <li><a href="mailto:inquiry@focuslife.ai?subject=Healthcare Provider Inquiry">Healthcare Providers</a></li>
+                        <li><a href="mailto:inquiry@focuslife.ai?subject=Partnership Inquiry">Partnerships</a></li>
+                        <li><a href="tel:615-829-6667">Phone: (615) 829-6667</a></li>
                     </ul>
                 </div>
             </div>
