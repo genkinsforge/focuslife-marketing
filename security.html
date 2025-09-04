@@ -324,6 +324,74 @@
             border-bottom-color: var(--white);
         }
 
+        /* Navigation Header */
+        .nav-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: var(--space-4) 0;
+            margin-bottom: var(--space-8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-6);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-back {
+            background: var(--primary);
+            color: var(--white);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: var(--space-4) var(--space-2);
@@ -344,10 +412,40 @@
             .compliance-badges {
                 justify-content: flex-start;
             }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: var(--space-3);
+            }
+            
+            .nav-links {
+                gap: var(--space-3);
+                font-size: 0.9rem;
+            }
+            
+            .nav-links a:not(.btn-back) {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+        <div class="nav-content">
+            <a href="./focuslife-marketing-page.html" class="nav-logo">
+                <img src="./favicon-32x32.png" alt="FocusLife.ai Logo">
+                <span>FocusLife.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="./privacy-policy.html">Privacy</a>
+                <a href="./terms-of-service.html">Terms</a>
+                <a href="./security.html">Security</a>
+                <a href="./focuslife-marketing-page.html" class="btn-back">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="header">
             <div class="header-badge">
@@ -377,12 +475,12 @@
                     <div class="stat-label">Transport Security</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Security Monitoring</div>
+                    <div class="stat-number">Zero</div>
+                    <div class="stat-label">Health Data Sales</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">99.9%</div>
-                    <div class="stat-label">Uptime SLA</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">User Data Ownership</div>
                 </div>
             </div>
         </div>
@@ -420,7 +518,7 @@
                         <li><strong>Network Security:</strong> VPC with private subnets</li>
                         <li><strong>Firewall Protection:</strong> Web Application Firewall (WAF)</li>
                         <li><strong>DDoS Protection:</strong> AWS Shield Advanced</li>
-                        <li><strong>Intrusion Detection:</strong> 24/7 monitoring system</li>
+                        <li><strong>Intrusion Detection:</strong> Automated monitoring system</li>
                     </ul>
                 </div>
 
@@ -571,16 +669,16 @@
         <section class="section">
             <h2>🔍 Monitoring & Incident Response</h2>
             
-            <h3>24/7 Security Monitoring</h3>
+            <h3>Proactive Security Measures</h3>
             <div class="security-grid">
                 <div class="security-feature">
-                    <h4>🚨 Real-Time Alerts</h4>
+                    <h4>🚨 Automated Security</h4>
                     <ul>
-                        <li>Failed login attempt patterns</li>
-                        <li>Unusual data access patterns</li>
-                        <li>System performance anomalies</li>
-                        <li>Security rule violations</li>
-                        <li>Infrastructure health issues</li>
+                        <li>Failed login attempt detection</li>
+                        <li>Unusual access pattern alerts</li>
+                        <li>System performance monitoring</li>
+                        <li>Security rule enforcement</li>
+                        <li>Infrastructure health checks</li>
                     </ul>
                 </div>
 
@@ -618,40 +716,40 @@
                 </div>
             </div>
 
-            <h3>Security Incident Response Timeline</h3>
+            <h3>Security Response Framework</h3>
             <table class="security-table">
                 <thead>
                     <tr>
-                        <th>Incident Severity</th>
-                        <th>Detection Time</th>
-                        <th>Response Time</th>
-                        <th>User Notification</th>
+                        <th>Incident Type</th>
+                        <th>Detection Method</th>
+                        <th>Response Protocol</th>
+                        <th>User Communication</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Critical (Data Breach)</strong></td>
-                        <td>Immediate</td>
-                        <td>< 15 minutes</td>
-                        <td>Within 72 hours</td>
+                        <td><strong>Data Breach</strong></td>
+                        <td>Automated monitoring</td>
+                        <td>Immediate containment</td>
+                        <td>Within 72 hours (legal requirement)</td>
                     </tr>
                     <tr>
-                        <td><strong>High (Service Compromise)</strong></td>
-                        <td>< 5 minutes</td>
-                        <td>< 30 minutes</td>
-                        <td>Within 24 hours</td>
+                        <td><strong>Account Compromise</strong></td>
+                        <td>Suspicious login patterns</td>
+                        <td>Account lockdown</td>
+                        <td>Immediate email notification</td>
                     </tr>
                     <tr>
-                        <td><strong>Medium (Performance Impact)</strong></td>
-                        <td>< 15 minutes</td>
-                        <td>< 2 hours</td>
-                        <td>Next business day</td>
+                        <td><strong>System Issues</strong></td>
+                        <td>Performance monitoring</td>
+                        <td>Service restoration</td>
+                        <td>Status page updates</td>
                     </tr>
                     <tr>
-                        <td><strong>Low (Minor Issues)</strong></td>
-                        <td>< 1 hour</td>
-                        <td>< 24 hours</td>
-                        <td>Weekly summary</td>
+                        <td><strong>Security Updates</strong></td>
+                        <td>Scheduled assessments</td>
+                        <td>Planned maintenance</td>
+                        <td>Advance notification</td>
                     </tr>
                 </tbody>
             </table>

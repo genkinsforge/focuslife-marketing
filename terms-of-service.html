@@ -178,6 +178,74 @@
             margin-bottom: var(--space-4);
         }
 
+        /* Navigation Header */
+        .nav-header {
+            background: var(--white);
+            border-bottom: 1px solid var(--gray-200);
+            padding: var(--space-4) 0;
+            margin-bottom: var(--space-8);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-6);
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-back {
+            background: var(--primary);
+            color: var(--white);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-lg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .btn-back:hover {
+            background: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
         .feature-table {
             width: 100%;
             border-collapse: collapse;
@@ -214,10 +282,40 @@
             .section h2 {
                 font-size: 1.5rem;
             }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: var(--space-3);
+            }
+            
+            .nav-links {
+                gap: var(--space-3);
+                font-size: 0.9rem;
+            }
+            
+            .nav-links a:not(.btn-back) {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Header -->
+    <nav class="nav-header">
+        <div class="nav-content">
+            <a href="./focuslife-marketing-page.html" class="nav-logo">
+                <img src="./favicon-32x32.png" alt="FocusLife.ai Logo">
+                <span>FocusLife.ai</span>
+            </a>
+            <div class="nav-links">
+                <a href="./privacy-policy.html">Privacy</a>
+                <a href="./terms-of-service.html">Terms</a>
+                <a href="./security.html">Security</a>
+                <a href="./focuslife-marketing-page.html" class="btn-back">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="header">
             <h1>Terms of Service</h1>
