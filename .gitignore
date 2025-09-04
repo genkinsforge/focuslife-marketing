@@ -1,0 +1,117 @@
+# Security & Credentials
+credentials.md
+*credentials*
+*.env
+*.env.local
+*.env.production
+.env.*
+secrets.json
+secrets.yaml
+secrets.yml
+*secrets*
+*.key
+*.pem
+*.p12
+*.pfx
+auth.json
+config.json
+private.json
+
+# API Keys & Tokens
+*token*
+*api-key*
+*api_key*
+*apikey*
+
+# Windows Zone Identifier files (security risk)
+*.Zone.Identifier
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Build outputs
+dist/
+build/
+out/
+
+# Temporary folders
+tmp/
+temp/
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Cache files
+.cache/
+.parcel-cache/
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
